@@ -27,7 +27,9 @@ class console_ntp(
   # otherwise validate, normalize, and pass our array of servers
   } else {
     # strip any whitespace from array elements to normalize
-    $final_server_list_array = strip($server_list_array)
+    $normal_server_list_array = strip($server_list_array)
+    # deduplicate empty array entries
+    $final_server_list_array = delete($normal_server_list_array, '')
     # make sure we ended up with a valid array
     validate_array($final_server_list_array)
     #pass the array of ntp servers to ntp
