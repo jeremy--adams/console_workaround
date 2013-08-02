@@ -18,6 +18,8 @@ class console_ntp(
     } else {
       $server_list_array = split($server_list, ',')
     }
+  } else {
+    fail("only array or string values are acceptable for server_list parameter")
   }
   # if no valid server list, defer to defaults in ntp
   if $server_list_array == undef {
