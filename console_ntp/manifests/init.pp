@@ -3,6 +3,9 @@
 # This class wraps ntp, takes a comma-separted string of ntp servers, creates
 # an array and passes this array as a parameter to the ntp class.
 # It has future support for arrays in the console built in.
+# This was designed for the following ntp module:
+# name    'saz-ntp'
+# version '2.0.3'
 
 class console_ntp(
   # we want to be able to define the server list in the PE console
