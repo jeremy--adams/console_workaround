@@ -9,7 +9,7 @@
 
 class console_ntp(
   # we want to be able to define the server list in the PE console
-  $servers
+  $servers = ''
 ) {
   # to future-proof this module for when PE Console supports array params
   if is_array($servers) {
