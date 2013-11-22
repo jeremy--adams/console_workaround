@@ -7,10 +7,8 @@
 # name    'puppetlabs-ntp'
 # version '1.0.1'
 
-class console_ntp(
-  # we want to be able to define the server list in the PE console
-  $servers = ''
-) {
+# we want to be able to define the server list in the PE console
+class console_ntp ( $servers = '' ) {
   # to future-proof this module for when PE Console supports array params
   if is_array($servers) {
     $servers_array = $servers
